@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .anime {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            /*background-image: url(pic25.jpg);*/
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        .ocean {
+            height: 300px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+        .water {
+            right: 0;
+            height: 100%;
+            width: 1800px;
+            position: absolute;
+            animation: water  10s linear infinite;
+        }
+
+        @keyframes water {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(500px);
+            }
+
+        }
+
+        .boat {
+            width: 350px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .boat img {
+            width: 500px;
+            height: 100%;
+            animation: boat  2s linear infinite;
+        }
+
+        @keyframes boat {
+            0% {
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                transform: rotate(-1deg) translateY(-3px);
+            }
+            50% {
+                transform: rotate(0deg) translateY(-5px);
+            }
+            75% {
+                transform: rotate(1deg) translateY(0);
+            }
+            100% {
+                transform: rotate(0deg) translateY(0);
+            }
+
+
+        }
+
+        .cloud {
+            height: 200px;
+            position: absolute;
+            right: 0;
+            animation: cloud  10s linear infinite;
+        }
+        .cloud img {
+            height: 800px;
+        }
+
+        @keyframes cloud {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(500px);
+            }
+
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="anime">
+
+      <div class="cloud">
+            <img src="cloud (2).png" >
+        </div>
+
+        <div class="ocean">
+            <img src="water.png" class="water">
+            <div class="boat">
+                <img src="boat.png">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
